@@ -1,5 +1,7 @@
 body {
     overflow-x: hidden;
+    color: #484848 !Important;
+    font-family: "Open Sans", sans-serif !important;
 }
 
 p {
@@ -16,7 +18,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #0096dd;
 }
 
 h1,
@@ -26,8 +28,13 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Open Sans Light", sans-serif;
+}
+
+hr.hr {
+    border: 1px solid #eee;
+    margin: 25px auto 30px;
+    max-width: 80%;
 }
 
 hr.star-light,
@@ -73,14 +80,34 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-header { /* FUNDO DO LOGO DA MOZILLA  */
+header {
     text-align: center;
-    color: #fff;
-    background: linear-gradient(to bottom, #E66000, #BB2200);
+    color: #FFF;
+    background-color: #f2f0e9;
+    background-image: url("/img/bg-gradient-sand.png"), url("/img/bg-sand.png");
+    background-repeat: repeat-x, repeat;
 }
-.navbar-default { /* CABECALHO COR */
-    background: linear-gradient(to bottom, #BB2200, #E66000);
+
+.navbar-default.navbar-style {
+    background: #f2f0e9 !important;
 }
+
+.navbar-default.navbar-shrink {
+    background: transparent;
+}
+
+.navbar-default a:hover, .navbar-default a:active, .navbar-default a:focus {
+    color: #20679E !important;
+}
+
+.navbar-default a {
+    color: #333 !important;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #FAFAFA !important;
+}
+
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -91,30 +118,9 @@ header img {
     margin: 0 auto 20px;
 }
 
-header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-}
-
-header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
-}
-
 @media(min-width:768px) {
     header .container {
-        padding: 200px 0 100px;
-    }
-
-    header .intro-text .name {
-        font-size: 5em;
-    }
-
-    header .intro-text .skills {
-        font-size: 1.75em;
+        padding: 100px 0 100px;
     }
 }
 
@@ -143,9 +149,7 @@ header .intro-text .skills {
 }
 
 .navbar {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Open Sans Light", sans-serif;
 }
 
 .navbar a:focus {
@@ -189,29 +193,29 @@ section.success {
     }
 }
 
-#portfolio .intro-text .name {
+#programacao .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans Light", sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
 
-#portfolio .portfolio-item {
+#programacao .portfolio-item {
     position: relative;
     display: block;
     right: 0;
     margin: 0 0 15px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+#programacao .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption {
+#programacao .portfolio-item .portfolio-link .caption {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -222,11 +226,11 @@ section.success {
     transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption:hover {
+#programacao .portfolio-item .portfolio-link .caption:hover {
     opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+#programacao .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -237,21 +241,21 @@ section.success {
     color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+#programacao .portfolio-item .portfolio-link .caption .caption-content i {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+#programacao .portfolio-item .portfolio-link .caption .caption-content h3,
+#programacao .portfolio-item .portfolio-link .caption .caption-content h4 {
     margin: 0;
 }
 
-#portfolio * {
+#programacao * {
     z-index: 2;
 }
 
 @media(min-width:767px) {
-    #portfolio .portfolio-item {
+    #programacao .portfolio-item {
         margin: 0 0 30px;
     }
 }
@@ -336,11 +340,6 @@ footer {
 
 footer h3 {
     margin-bottom: 30px;
-}
-
-footer .footer-above { /* COR FINAL DA PAGINA */
-    padding-top: 50px;
-    background: linear-gradient(to bottom, #E66000, #BB2200);
 }
 
 footer .footer-col {
@@ -452,3 +451,21 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+.table > tbody > tr.info > td {
+    background-color: #3c5466 !important;
+}
+
+#programacao table tr td {
+    padding: 20px !important;
+}
+
+footer .footer-above {
+    padding-top: 20px !Important;
+    background-color: #f2f0e9;
+}
+
+footer .footer-col {
+    margin-bottom: 20px !important;
+}
+
