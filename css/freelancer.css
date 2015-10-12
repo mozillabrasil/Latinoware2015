@@ -469,3 +469,8 @@ footer .footer-col {
     margin-bottom: 20px !important;
 }
 
+#staff img {
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    box-shadow: 0 0 1px #eee;
+}
