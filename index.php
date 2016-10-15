@@ -1,15 +1,29 @@
-<!DOCTYPE html>
+<?php
+
+  function verificaDatas($dataInicio, $dataFim){
+    $dataAtual = date("Y-m-d H:i:s");
+    //$dataAtual = "2015-10-15 14:30:00";
+    if($dataAtual >= $dataInicio && $dataAtual < $dataFim){
+      echo ' class="occurring"';
+    }elseif($dataAtual >= $dataFim){
+      echo ' class="finished"';
+    }
+  }
+
+?><!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="196x196" href="/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="favicon.png">
     <title>Mozilla na Latinoware</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/css/freelancer.css" rel="stylesheet" type="text/css">
-    <link href='/css/fonts.css' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet
+    " type="text/css">
+    <link href="css/freelancer.css" rel="stylesheet" type="text/css">
+    <link href="css/tables.css" rel="stylesheet" type="text/css">
+    <link href='css/fonts.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body id="topo" class="index">
@@ -48,7 +62,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="/img/profile.png" width="400" alt="Comunidade Mozilla Brasil">
+                    <img class="img-responsive" src="img/profile.png" width="400" alt="Comunidade Mozilla Brasil">
                 </div>
             </div>
         </div>
@@ -85,7 +99,7 @@
                   </tr>
 
                   <!-- 2 LINHA -->
-                  <tr>
+                  <tr <?php verificaDatas("2015-10-14 13:00:00", "2015-10-14 14:00:00"); ?>>
                     <!-- O QUE HA DE NOVO NO FIREFOX -->
                     <td style="text-align: center;"><strong>13:00~14:00<br/><br/>ESPAÇO EQUADOR</strong></td>
                     <td style="text-align: center;"><strong style="display: block;">PALESTRA: O que há de novo no Firefox?</strong>
@@ -98,9 +112,9 @@
                     </td>
                   </tr> <!-- FIM LINHA 2 -->
 
-                <tr> <!-- 3 LINHA -->
+                <tr <?php verificaDatas("2015-10-14 16:00:00", "2015-10-14 17:00:00"); ?>> <!-- 3 LINHA -->
                   <!-- OPEN BADGES -->
-                  <td style="text-align: center;"><strong>14:00~15:00<br/><br/>ESPAÇO URUGUAI</strong></td>
+                  <td style="text-align: center;"><strong>16:00~17:00<br/><br/>ESPAÇO URUGUAI</strong></td>
                   <td style="text-align: center;"> <!-- style="cursor: pointer;"> EFEITOS -->
                     <strong style="display: block;">PALESTRA: OpenBadges</strong>
                     <small>Jayme</small>
@@ -111,8 +125,8 @@
                 </tr> <!-- FIM 3 LINHA-->
 
                 <!-- 10 LINHA -->
-                <tr>
-                  <td style="text-align: center;"><strong>16:00~20:00<br/><br/>LAB1</strong></td>
+                <tr <?php verificaDatas("2015-10-14 16:00:00", "2015-10-14 20:00:00"); ?>>
+                  <td style="text-align: center;"><strong>16:00~20:00<br/><b/>LAB1</strong></td>
                   <td style="text-align: center;">
                     <strong style="display: block;">WORKSHOP: Ferramentas de desenvolvimento da Mozilla</strong>
                     <small>João, Samuel, Jaime</small>
@@ -137,7 +151,7 @@
                 </tr> <!-- FIM 5 LINHA -->
 
                 <!-- 6 LINHA -->
-                <tr>
+                <tr <?php verificaDatas("2015-10-15 10:00:00", "2015-10-15 14:00:00"); ?>>
                   <td style="text-align: center;"><strong>10:00~14:00<br/><br/>LAB1</strong></td>
                   <td style="text-align: center;">
                     <strong style="display: block;">WORKSHOP: Localização de produtos da Mozilla para português, castelhano e guarani</strong>
@@ -151,7 +165,7 @@
                 </tr> <!-- FIM 6 LINHA PARADO AQUI! -->
 
                 <!-- 7 LINHA -->
-                <tr>
+                <tr <?php verificaDatas("2015-10-15 14:00:00", "2015-10-15 18:00:00"); ?>>
                   <td style="text-align: center;"><strong>14:00~18:00<br/><br/>LAB4</strong></td>
                   <td style="text-align: center;">
                     <strong style="display: block;">WORKSHOP: Como proteger sua privacidade na web</strong>
@@ -177,7 +191,7 @@
                 </tr> <!-- FIM 9 LINHA -->
 
                 <!-- 10 LINHA -->
-                <tr>
+                <tr <?php verificaDatas("2015-10-16 10:00:00", "2015-10-16 14:00:00"); ?>>
                   <td style="text-align: center;"><strong>10:00~14:00<br/><br/>LAB1</strong></td>
                   <td style="text-align: center;">
                     <strong style="display: block;">WORKSHOP: Webmaker</strong>
@@ -191,7 +205,7 @@
                 </tr> <!-- FIM 10 LINHA -->
 
                 <!-- 11 LINHA -->
-                <tr>
+                <tr <?php verificaDatas("2015-10-15 14:30:00", "2015-10-15 15:30:00"); ?>>
                   <td style="text-align: center;"><strong>14:30~15:30<br/><br/>ESPAÇO COLÔMBIA</strong></td>
                   <td style="text-align: center;">
                       <strong style="display: block;">PALESTRA: Envolva-se com a Mozilla Brasil e Paraguai</strong>
@@ -205,7 +219,7 @@
                 </tr> <!-- FIM 11 LINHA -->
 
                 <!-- INICIO LINHA 12 -->
-                <tr>
+                <tr <?php verificaDatas("2015-10-15 15:30:00", "2015-10-15 16:30:00"); ?>>
                   <!-- WEBMAKER -->
                   <td style="text-align: center;"><strong>15:30~16:30<br/><br/>ESPAÇO COLÔMBIA</strong></td>
                   <td style="text-align: center;">
@@ -220,7 +234,7 @@
                 </tr> <!-- FIM LINHA 12 -->
 
                 <!-- 13 LINHA -->
-                <tr> <!-- WOMOZ, MINICURSO -->
+                <tr <?php verificaDatas("2015-10-15 16:30:00", "2015-10-15 17:30:00"); ?>> <!-- WOMOZ, MINICURSO -->
                   <!-- WOMOZ -->
                   <td style="text-align: center;"><strong>16:30~17:30<br/><br/>ESPAÇO COLÔMBIA</strong></td>
                   <td style="text-align: center;">
@@ -404,11 +418,11 @@
         </div>
     </footer>
 
-    <script src="/js/jquery-1.10.2.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/js/classie.js"></script>
-    <script src="/js/cbpAnimatedHeader.js"></script>
-    <script src="/js/freelancer.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/freelancer.js"></script>
 </body>
 </html>

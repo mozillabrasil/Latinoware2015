@@ -1,0 +1,13 @@
+.table > tbody > tr.finished > td{
+  background: #C7FCBD;
+  border: 1px solid #ECF0F1;
+  line-height: 1.42857;
+  vertical-align: top;
+}
+
+.table > tbody > tr.occurring > td{
+  background: #FCDEBD;
+  border: 1px solid #ECF0F1;
+  line-height: 1.42857;
+  vertical-align: top;
+}

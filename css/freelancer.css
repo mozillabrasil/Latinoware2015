@@ -84,7 +84,7 @@ header {
     text-align: center;
     color: #FFF;
     background-color: #f2f0e9;
-    background-image: url("/img/bg-gradient-sand.png"), url("/img/bg-sand.png");
+    background-image: url("../img/bg-gradient-sand.png"), url("../img/bg-sand.png");
     background-repeat: repeat-x, repeat;
 }
 
